@@ -1,6 +1,6 @@
 Config = {}
 
-Config.Locale = 'de'
+Config.Locale = 'en'
 Config.Framework = 'esx' -- esx or qbcore (qbcore is broken at the moment)
 
 Config.DrawDistance = 10.0
