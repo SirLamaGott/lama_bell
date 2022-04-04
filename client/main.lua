@@ -8,8 +8,7 @@ if Config.Framework == 'esx' then
 	end)
 	
 elseif Config.Framework == 'qbcore' then
-	-- qb core start up
-	-- COMING SOON
+	local QBCore = exports['qb-core']:GetCoreObject()
 end
 
 Citizen.CreateThread(function()
