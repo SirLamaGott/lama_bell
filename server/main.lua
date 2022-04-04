@@ -1,14 +1,10 @@
-if Config.Framework == 'esx' and Config.EsxVersion == '1.2' then
+if Config.Framework == 'esx' then
 	ESX = nil
 	TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 	
-elseif Config.Framework == 'esx' and Config.EsxVersion == 'legacy' then
-	-- esx legacy start up method
-	-- COMING SOON
-	
 elseif Config.Framework == 'qbcore' then
-	-- qb core start up
-	-- COMING SOON
+	local QBCore = exports['qb-core']:GetCoreObject()
+	
 end
 
 RegisterServerEvent('lama_ring:triggerBell')
