@@ -4,9 +4,10 @@ Let player ring a bell to notify a job about them waiting. It works with ESX and
 # Requirements
 - ESX or QBcore
 
-# Optional Requirements
-- Interact-Sounds
-- qbcore-interact
+# Planned Features
+- interact-sounds support
+- cooldown for using the bell
+- option for bell notification in range
 
 # Installation
 1. Install all the requirements
