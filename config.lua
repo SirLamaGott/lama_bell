@@ -1,7 +1,7 @@
 Config = {}
 
 Config.Locale = 'en'
-Config.Framework = 'esx' -- esx or qbcore (qbcore is broken at the moment)
+Config.UseInteractSound = false --REQUIRES: https://github.com/plunkettscott/interact-sound/releases 
 
 Config.DrawDistance = 10.0
 Config.InteractDistance = 1.2
@@ -13,17 +13,26 @@ Config.BellPoints = {
 		Color  = {r = 255, g = 255, b = 255},
 		Size   = {x = 1.0, y = 1.0, z = 1.0},
 		Marker = 1,
-		Job    = 'cardealer', -- Which Job shall get a message?
-		Image  = 'CHAR_CARSITE', -- Available Images: https://wiki.rage.mp/index.php?title=Notification_Pictures
+		
+		Job      = 'cardealer', -- Which Job shall get a message?
+		Image    = 'CHAR_CARSITE', -- Available Images: https://wiki.rage.mp/index.php?title=Notification_Pictures
+		Title    = 'Title',
+		SubTitle = 'SubTitle',
+		Text     = 'Example Text',
+		
 	},
 	
 	police = {
-		Pos    = {x = -48.2914, y = -1097.5687, z = 26.4223}, 
-		Color  = {r = 0, g = 255, b = 51}, 
+		Pos    = {x = 432.3734, y = -980.1884, z = 29.7119}, 
+		Color  = {r = 0, g = 98, b = 255}, 
 		Size   = {x = 1.0, y = 1.0, z = 1.0},
 		Marker = 1,
+		
 		Job    = 'police',
 		Image  = 'CHAR_CALL911',
+		Title    = 'Bell',
+		SubTitle = 'Mission Row Police Department',
+		Text     = 'Someone has rang the bell!',
 	},
 	
 }
