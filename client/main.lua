@@ -1,15 +1,11 @@
-if Config.Framework == 'esx' then
-	ESX = nil
-	Citizen.CreateThread(function()
-		while ESX == nil do
-			TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-			Citizen.Wait(0)
-		end
-	end)
-	
-elseif Config.Framework == 'qbcore' then
-	local QBCore = exports['qb-core']:GetCoreObject()
-end
+ESX = nil
+Citizen.CreateThread(function()
+	while ESX == nil do
+		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+		Citizen.Wait(0)
+	end
+end)
+
 
 Citizen.CreateThread(function()
 	while true do
@@ -22,7 +18,7 @@ Citizen.CreateThread(function()
 				ESX.ShowHelpNotification(_U('trigger'))
 				if IsControlJustReleased(0, 38) then
 					ESX.ShowNotification(_U('used'))
-					TriggerServerEvent('lama_ring:triggerBell', v.Job, v.Image)				
+					TriggerServerEvent('lama_ring:triggerBell', v.Job, v.Image, v.Title, v.SubTitle, v.Text)				
 				end	
 			end
 			
