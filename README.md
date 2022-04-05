@@ -3,7 +3,7 @@ Let player ring a bell to notify a job about them waiting. It works with ESX and
 
 # Requirements
 - ESX
-- interact-sounds (optional)
+- interact-sound (optional)
 
 # Planned Features
 - cooldown for using the bell
