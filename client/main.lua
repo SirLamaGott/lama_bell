@@ -18,7 +18,11 @@ Citizen.CreateThread(function()
 				ESX.ShowHelpNotification(_U('trigger'))
 				if IsControlJustReleased(0, 38) then
 					ESX.ShowNotification(_U('used'))
-					TriggerServerEvent('lama_ring:triggerBell', v.Job, v.Image, v.Title, v.SubTitle, v.Text)				
+					TriggerServerEvent('lama_ring:triggerBell', v.Job, v.Image, v.Title, v.SubTitle, v.Text)					
+					if Config.UseInteractSound then
+						TriggerServerEvent("InteractSound_SV:PlayWithinDistance", 1.5, Config.SoundName, 1.0)
+					end
+					
 				end	
 			end
 			
