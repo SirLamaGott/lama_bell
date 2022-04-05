@@ -2,6 +2,7 @@ Config = {}
 
 Config.Locale = 'en'
 Config.UseInteractSound = false --REQUIRES: https://github.com/plunkettscott/interact-sound/releases 
+Config.SoundName = "soundname"
 
 Config.DrawDistance = 10.0
 Config.InteractDistance = 1.2
@@ -16,9 +17,9 @@ Config.BellPoints = {
 		
 		Job      = 'cardealer', -- Which Job shall get a message?
 		Image    = 'CHAR_CARSITE', -- Available Images: https://wiki.rage.mp/index.php?title=Notification_Pictures
-		Title    = 'Title',
-		SubTitle = 'SubTitle',
-		Text     = 'Example Text',
+		Title    = 'Title', -- Title of the Bell Notification
+		SubTitle = 'SubTitle', -- SubTitle of the Bell Notification
+		Text     = 'Example Text', -- Text of the Bell Notification
 		
 	},
 	
@@ -31,7 +32,7 @@ Config.BellPoints = {
 		Job    = 'police',
 		Image  = 'CHAR_CALL911',
 		Title    = 'Bell',
-		SubTitle = 'Mission Row Police Department',
+		SubTitle = 'Police Department',
 		Text     = 'Someone has rang the bell!',
 	},
 	
