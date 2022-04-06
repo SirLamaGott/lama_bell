@@ -14,7 +14,7 @@ Citizen.CreateThread(function()
 		local playerCoords = GetEntityCoords(playerPed)		
 		
 		for k, v in pairs(Config.BellPoints) do	
-			if #(playerCoords - vector3(v.Pos.x, v.Pos.y, v.Pos.z) < Config.DrawDistance then
+			if #(playerCoords - vector3(v.Pos.x, v.Pos.y, v.Pos.z)) < Config.DrawDistance then
 				sleep = 0
 				DrawMarker(v.Marker, v.Pos.x, v.Pos.y, v.Pos.z, 0.0, 0.0, 0.0, 0, 0.0, 0.0, v.Size.x, v.Size.y, v.Size.z, v.Color.r, v.Color.g, v.Color.b, 100, false, true, 2, false, false, false, false)
 				if #(playerCoords - vector3(v.Pos.x, v.Pos.y, v.Pos.z)) < Config.InteractDistance then
