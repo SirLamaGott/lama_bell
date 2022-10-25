@@ -1,6 +1,8 @@
 # Lama - Bell Script
 Let player ring a bell to notify a job about them waiting. It works with ESX and soon with QBcore too! Almost everything is configurable trough the Config.
 
+# Script is outdated, rewrite coming soon!
+
 # Requirements
 - ESX
 - interact-sound (optional)
