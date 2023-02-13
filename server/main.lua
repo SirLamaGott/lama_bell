@@ -1,5 +1,4 @@
-ESX = nil
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+ESX = exports["es_extended"]:getSharedObject()
 
 RegisterServerEvent('lama_ring:triggerBell')
 AddEventHandler('lama_ring:triggerBell', function(job, image, title, subtitle, text)
@@ -11,8 +10,8 @@ AddEventHandler('lama_ring:triggerBell', function(job, image, title, subtitle, t
 		local xPlayerJob = xPlayer.job.name
 
 			if xPlayerJob == job then
-					TriggerClientEvent('esx:showAdvancedNotification', xPlayers[i], title, subtitle, text, image, 1)		
+				TriggerClientEvent('esx:showAdvancedNotification', xPlayers[i], title, subtitle, text, image, 1)		
 			end
 	end
-	Citizen.Wait(100)
+	Wait(100)
 end) 

@@ -1,15 +1,8 @@
-ESX = nil
-Citizen.CreateThread(function()
-	while ESX == nil do
-		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-		Citizen.Wait(0)
-	end
-end)
-
+ESX = exports["es_extended"]:getSharedObject()
 
 Citizen.CreateThread(function()
 	while true do
-	        local sleep = 500  
+	    local sleep = 500 
 		local playerPed = PlayerPedId()
 		local playerCoords = GetEntityCoords(playerPed)		
 		
@@ -22,14 +15,12 @@ Citizen.CreateThread(function()
 					if IsControlJustReleased(0, 38) then
 						ESX.ShowNotification(_U('used'))
 						TriggerServerEvent('lama_ring:triggerBell', v.Job, v.Image, v.Title, v.SubTitle, v.Text)					
-						if Config.UseInteractSound then
-							TriggerServerEvent("InteractSound_SV:PlayWithinDistance", 1.5, Config.SoundName, 1.0)
+						if Config.UseSound then
+							exports['xsound']:PlayUrlPos('bell', Config.SoundURL, 1.0, vector3(v.Pos.x, v.Pos.y, v.Pos.z))
 						end
-
 					end	
 				end
 			end
-			
 		end
 		Wait(sleep)
 	end			

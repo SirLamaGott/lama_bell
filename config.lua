@@ -1,8 +1,8 @@
 Config = {}
 
 Config.Locale = 'en'
-Config.UseInteractSound = false --REQUIRES: https://github.com/plunkettscott/interact-sound/releases 
-Config.SoundName = "soundname"
+Config.UseSound = false
+Config.SoundURL = 'url'
 
 Config.DrawDistance = 10.0
 Config.InteractDistance = 1.2

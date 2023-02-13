@@ -4,7 +4,7 @@ lua54 'yes'
 
 author 'SirLamaGott'
 description 'Lama - Ring'
-version '0.1.0'
+version '1.0.0-custom'
 
 client_scripts {
 	'client/main.lua',
@@ -21,3 +21,5 @@ server_scripts {
 } 
 
 shared_script 'config.lua'
+
+dependency 'xsound'
